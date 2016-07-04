@@ -1,0 +1,28 @@
+footer {
+    background-color: $negro-1;
+    .fila {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        section {
+            @media #{$mobile} {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+            h5 {
+                @include estilo-tipografico(1.2rem, $blanco, $source-sans, 600, left);
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    @include estilo-tipografico(0.7rem, $blanco, $source-sans, 400, left);
+                    margin-top: 10px;
+                    a {
+                        @include estilo-tipografico(0.7rem, $blanco, $source-sans, 400, left);
+                    }
+                }
+            }
+        }
+    }
+}

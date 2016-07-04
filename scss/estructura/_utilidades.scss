@@ -1,0 +1,372 @@
+/* Estados de overflow */
+@each $overflow in auto, hidden, visible, scroll {
+    //
+    .overflow-#{$overflow} {
+        overflow: $overflow;
+    }
+}
+
+/* Propiedades NONE */
+@each $no-properties in background, border {
+    //
+    .no-#{$no-properties} {
+        #{$no-properties}: none !important;
+    }
+}
+/* Propiedades 0 para padding y margin */
+@each $no-properties in padding, margin {
+    //
+    .no-#{$no-properties} {
+        #{$no-properties}: 0;
+    }
+    .no-#{$no-properties}-i {
+        #{$no-properties}: 0 !important;
+    }
+    @media #{$mobile} {
+        .xs-no-#{$no-properties} {
+            #{$no-properties}: 0;
+        }
+        .xs-no-#{$no-properties}-i {
+            #{$no-properties}: 0 !important;
+        }
+    }
+    @media #{$tablet} {
+        .sm-no-#{$no-properties} {
+            #{$no-properties}: 0;
+        }
+        .sm-no-#{$no-properties}-i {
+            #{$no-properties}: 0 !important;
+        }
+    }
+    @media #{$desktop-small} {
+        .md-no-#{$no-properties} {
+            #{$no-properties}: 0;
+        }
+        .md-no-#{$no-properties}-i {
+            #{$no-properties}: 0 !important;
+        }
+    }
+    @media #{$desktop-large} {
+        .lg-no-#{$no-properties} {
+            #{$no-properties}: 0;
+        }
+        .lg-no-#{$no-properties}-i {
+            #{$no-properties}: 0 !important;
+        }
+    }
+}
+    
+/* Margin por clase hasta 60 */
+@for $i from 1 through 60 {
+    //
+    @each $pos in top, left, bottom, right {
+        $n: $i/* * 4 */;
+        $value: 1px * $n;
+        //
+        .margin-#{$pos}-#{$n} {
+            margin-#{$pos}: $value;
+        }
+        //
+        .margin-#{$pos}-#{$n}-i {
+            margin-#{$pos}: $value !important;
+        }
+        //
+        .padding-#{$pos}-#{$n} {
+            padding-#{$pos}: $value;
+        }
+        //
+        .padding-#{$pos}-#{$n}-i {
+            padding-#{$pos}: $value !important;
+        }
+        @media #{$mobile} {
+            .xs-margin-#{$pos}-#{$n} {
+                margin-#{$pos}: $value;
+            }
+            //
+            .xs-margin-#{$pos}-#{$n}-i {
+                margin-#{$pos}: $value !important;
+            }
+            //
+            .xs-padding-#{$pos}-#{$n} {
+                padding-#{$pos}: $value;
+            }
+            //
+            .xs-padding-#{$pos}-#{$n}-i {
+                padding-#{$pos}: $value !important;
+            }
+        }
+        @media #{$tablet} {
+            .sm-margin-#{$pos}-#{$n} {
+                margin-#{$pos}: $value;
+            }
+            //
+            .sm-margin-#{$pos}-#{$n}-i {
+                margin-#{$pos}: $value !important;
+            }
+            //
+            .sm-padding-#{$pos}-#{$n} {
+                padding-#{$pos}: $value;
+            }
+            //
+            .sm-padding-#{$pos}-#{$n}-i {
+                padding-#{$pos}: $value !important;
+            }
+        }
+        @media #{$desktop-small} {
+            .md-margin-#{$pos}-#{$n} {
+                margin-#{$pos}: $value;
+            }
+            //
+            .md-margin-#{$pos}-#{$n}-i {
+                margin-#{$pos}: $value !important;
+            }
+            //
+            .md-padding-#{$pos}-#{$n} {
+                padding-#{$pos}: $value;
+            }
+            //
+            .md-padding-#{$pos}-#{$n}-i {
+                padding-#{$pos}: $value !important;
+            }
+        }
+        @media #{$desktop-large} {
+            .lg-margin-#{$pos}-#{$n} {
+                margin-#{$pos}: $value;
+            }
+            //
+            .lg-margin-#{$pos}-#{$n}-i {
+                margin-#{$pos}: $value !important;
+            }
+            //
+            .lg-padding-#{$pos}-#{$n} {
+                padding-#{$pos}: $value;
+            }
+            //
+            .lg-padding-#{$pos}-#{$n}-i {
+                padding-#{$pos}: $value !important;
+            }
+        }
+    }
+}
+
+/* Clases para border */
+$position: top, left, bottom, right;
+$properties: solid, dashed, dotted, inset;
+@each $prop in $properties { 
+    // 
+    .border-#{$prop} {
+        border: 1px #{$prop} $gris-claro-2 !important;
+    }
+    @media #{$mobile} {
+        .xs-border-#{$prop} {
+            border: 1px #{$prop} $gris-claro-2 !important;
+        }
+    }
+    @media #{$tablet} {
+        .sm-border-#{$prop} {
+            border: 1px #{$prop} $gris-claro-2 !important;
+        }
+    }
+    @media #{$desktop-small} {
+        .md-border-#{$prop} {
+            border: 1px #{$prop} $gris-claro-2 !important;
+        }
+    }
+    @media #{$desktop-large} {
+        .lg-border-#{$prop} {
+            border: 1px #{$prop} $gris-claro-2 !important;
+        }
+    }
+    //
+    @each $pos in $position {
+        // Propiedad para la clase .border-$posicion-$propiedad
+        .border-#{$pos}-#{$prop} {
+            border-#{$pos}: 1px #{$prop} $gris-claro-2 !important;
+        }
+        @media #{$mobile} {
+            .xs-border-#{$pos}-#{$prop} {
+                border-#{$pos}: 1px #{$prop} $gris-claro-2 !important;
+            }
+        }
+        @media #{$tablet} {
+            .sm-border-#{$pos}-#{$prop} {
+                border-#{$pos}: 1px #{$prop} $gris-claro-2 !important;
+            }
+        }
+        @media #{$desktop-small} {
+            .md-border-#{$pos}-#{$prop} {
+                border-#{$pos}: 1px #{$prop} $gris-claro-2 !important;
+            }
+        }
+        @media #{$desktop-large} {
+            .lg-border-#{$pos}-#{$prop} {
+                border-#{$pos}: 1px #{$prop} $gris-claro-2 !important;
+            }
+        }
+    }
+}
+
+/* Clases para NO border */
+@each $pos in $position {
+    // Propiedad para la clase
+    .no-border-#{$pos} {
+        border-#{$pos}: none !important;
+    }
+    @media #{$mobile} {
+        .xs-no-border-#{$pos} {
+            border-#{$pos}: none !important;
+        }
+    }
+    @media #{$tablet} {
+        .sm-no-border-#{$pos} {
+            border-#{$pos}: none !important;
+        }
+    }
+    @media #{$desktop-small} {
+        .md-no-border-#{$pos} {
+            border-#{$pos}: none !important;
+        }
+    }
+    @media #{$desktop-large} {
+        .lg-no-border-#{$pos} {
+            border-#{$pos}: none !important;
+        }
+    }
+}
+
+@mixin estilo-tipografico($size, $color, $tipo, $grosor, $alinear) {
+    font-size: #{$size};
+    font-family: $tipo;
+    font-weight: $grosor;
+    color: $color;
+    text-align: $alinear;
+}
+
+/* Ancho variable según elementos + clases (MIXIN) */
+@mixin columnas-grilla($col, $grilla) {
+    width: (100% / $grilla) * $col;
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@mixin columnas-grilla-margin($col, $grilla) {
+    $wCol: (100% / $grilla) * $col;
+    margin-left: $wCol;
+}
+@mixin columnas-grilla-margin-media($col, $grilla) {
+    $wCol: (100% / $grilla) * $col;
+    margin-left: $wCol !important;
+}
+
+/* Clases para columnas del 1 al 24 */
+@for $i from 1 through 24 {
+    .grilla-#{$i}-24 {
+        @include columnas-grilla($i, 24);
+        @media #{$mobile}{
+            width: 100%;
+        }
+    }
+    .xs-grilla-#{$i}-24 {
+        @media #{$mobile}{
+            @include columnas-grilla($i, 24);
+        }
+    }
+    .sm-grilla-#{$i}-24 {
+        @media #{$tablet}{
+            @include columnas-grilla($i, 24);
+        }
+    }
+    .md-grilla-#{$i}-24 {
+        @media #{$desktop-small}{
+            @include columnas-grilla($i, 24);
+        }
+    }
+    .lg-grilla-#{$i}-24 {
+        @media #{$desktop-large}{
+            @include columnas-grilla($i, 24);
+        }
+    }
+}
+
+/* Clases para margenes de columnas del 0 al 24 */
+@for $i from 0 through 24 {
+    // Margen de grilla
+    .grilla-margin-#{$i}-24 {
+        @include columnas-grilla-margin($i, 24);
+        @media #{$mobile}{
+            margin-left: 0;
+        }
+    }
+    .xs-grilla-margin-#{$i}-24 {
+        @media #{$mobile}{
+            @include columnas-grilla-margin-media($i, 24);
+        }
+    }
+    .sm-grilla-margin-#{$i}-24 {
+        @media #{$tablet}{
+            @include columnas-grilla-margin-media($i, 24);
+        }
+    }
+    .md-grilla-margin-#{$i}-24 {
+        @media #{$desktop-small}{
+            @include columnas-grilla-margin-media($i, 24);
+        }
+    }
+    .lg-grilla-margin-#{$i}-24 {
+        @media #{$desktop-large}{
+            @include columnas-grilla-margin-media($i, 24);
+        }
+    }
+}
+
+/* Clases para font-size del 6 al 60 */
+@for $i from 6 through 60 {
+    .font-size-#{$i} {
+        font-size: #{$i}px;
+    }
+    .font-size-#{$i}-i {
+        font-size: #{$i}px !important;
+    }
+    .xs-font-size-#{$i} {
+        @media #{$mobile}{
+            font-size: #{$i}px;
+        }
+    }
+    .xs-font-size-#{$i}-i {
+        @media #{$mobile}{
+            font-size: #{$i}px !important;
+        }
+    }
+    .sm-font-size-#{$i} {
+        @media #{$tablet}{
+            font-size: #{$i}px;
+        }
+    }
+    .sm-font-size-#{$i}-i {
+        @media #{$tablet}{
+            font-size: #{$i}px !important;
+        }
+    }
+    .md-font-size-#{$i} {
+        @media #{$desktop-small}{
+            font-size: #{$i}px;
+        }
+    }
+    .md-font-size-#{$i}-i {
+        @media #{$desktop-small}{
+            font-size: #{$i}px !important;
+        }
+    }
+    .lg-font-size-#{$i} {
+        @media #{$desktop-large}{
+            font-size: #{$i}px;
+        }
+    }
+    .lg-font-size-#{$i}-i {
+        @media #{$desktop-large}{
+            font-size: #{$i}px !important;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+#slider {
+    position: relative;
+    z-index: 1;
+    div {
+        width: 100%;
+    }
+    .owl-stage {
+        @media #{$mobile}{
+            margin-top: 15px;
+        }
+    }
+    .owl-item {
+        position: relative;
+        .caption {
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            bottom: 60px;
+            left: 8.33333%;
+            max-width: 60%;
+            padding: 20px;
+            @media #{$mobile-y-tablet}{
+                background-color: $negro-1;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-width: none;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            h3 {
+                @include estilo-tipografico(1rem, $blanco, $source-sans, 400, left);
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .owl-nav {
+        @media #{$mobile-y-tablet}{
+            position: relative;
+        }
+        .owl-prev {
+            background-image: url('../img/arrow_left.svg');
+            left: 10px;
+        }
+        .owl-next {
+            background-image: url('../img/arrow_right.svg');
+            right: 10px;
+        }
+        > div {
+            text-indent: 9999px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 50px;
+            width: 50px;
+            @media #{$mobile-y-tablet}{
+                top: -150px;
+            }
+        }
+    }
+}
+main {
+    section {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        h2 {
+            @include estilo-tipografico(1.8rem, $gris-oscuro-1, $source-sans, 400, left);
+            margin-bottom: 15px;
+            @media #{$mobile}{
+                text-align: center;
+            }
+            span {
+                @include estilo-tipografico(1.8rem, $gris-oscuro-2, $source-sans, 400, left);
+            }
+        }
+    
+        h2.titulo {
+            @include estilo-tipografico(1.8rem, $blanco, $source-sans, 700, left);
+            background-color: $negro-1;
+            padding: 15px 30px;
+            margin-bottom: 15px;
+            @media #{$mobile}{
+                text-align: center;
+            }
+        }
+
+        h4 {
+            @include estilo-tipografico(1.4rem, $gris-oscuro-1, $source-sans, 400, left);
+            margin-bottom: 15px;
+            @media #{$mobile}{
+                text-align: center;
+            }
+        }
+
+        h5 {
+            @include estilo-tipografico(1.2rem, $gris-oscuro-1, $source-sans, 400, center);
+            margin-bottom: 15px;
+            @media #{$mobile}{
+                text-align: center;
+            }
+        }
+        h6 {
+            @include estilo-tipografico(1rem, $gris-oscuro-1, $source-sans, 400, left);
+            margin-bottom: 15px;
+            @media #{$mobile}{
+                text-align: center;
+            }
+        }
+        p {
+            @include estilo-tipografico(0.7rem, $gris-oscuro-2, $source-sans, 400, left);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+        }
+        ul.clientes {
+            li {
+                @include estilo-tipografico(1rem, $gris-oscuro-2, $source-sans, 400, left);
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+        }
+        a.button.ver-detalles {
+            margin-bottom: 15px;
+        }
+    }
+}
+#form-contacto {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media #{$mobile}{
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    div.input {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        label {
+            float: left;
+            margin-bottom: 5px;
+            @include estilo-tipografico(0.8rem, $gris-oscuro-2, $source-sans, 700, left);
+            @media #{$mobile}{
+                width: 100%;
+            }
+        }
+        input {
+            float: right;
+            width: 400px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid $gris-claro-1;
+            @include estilo-tipografico(0.7rem, $gris-oscuro-2, $source-sans, 400, left);
+            &::placeholder {
+               @include estilo-tipografico(0.7rem, rgba(0,0,0,0.5), $source-sans, 400, left);
+            }
+            @media #{$mobile}{
+                width: 100%;
+            }
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid $gris-claro-1;
+            @include estilo-tipografico(0.7rem, $gris-oscuro-2, $source-sans, 400, left);
+            &::placeholder {
+               @include estilo-tipografico(0.7rem, rgba(0,0,0,0.5), $source-sans, 400, left);
+            }
+        }
+    }
+    button.submit {
+        width: 150px;
+        height: 40px;
+        background: $negro-2;
+        border: none;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        @include estilo-tipografico(0.7rem, $blanco, $source-sans, 700, center);
+        @media #{$mobile}{
+            width: 100%;
+        }
+    }
+}
+main.area p.area {
+    line-height: 2;
+}

@@ -1,0 +1,197 @@
+/* RESETS */
+
+figure {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+html {
+    font-size: 20px;
+}
+
+
+/* Contenedor General */
+
+.contenedor-general {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    .fila {
+        float: left;
+        width: 100%;
+    }
+    @media #{$mobile} {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    @media #{$tablet} {
+        width: 750px;
+    }
+    @media #{$desktop-small} {
+        width: 970px;
+    }
+}
+
+
+/* Contenedor General */
+
+.contenedor-extendido {
+    width: 100%;
+    margin: 0;
+    float: left;
+}
+
+.color-gris-claro-1 {
+    color: $gris-claro-1;
+}
+
+.color-gris-claro-2 {
+    color: $gris-claro-2;
+}
+
+.color-gris-oscuro-1 {
+    color: $gris-oscuro-1;
+}
+
+.color-gris-oscuro-2 {
+    color: $gris-oscuro-2;
+}
+
+.color-negro-1 {
+    color: $negro-1;
+}
+
+.color-negro-2 {
+    color: $negro-2;
+}
+
+.color-azul {
+    color: $azul-1;
+}
+
+.color-blanco {
+    color: $blanco;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.no-desktop {
+    @media #{$desktop} {
+        display: none !important;
+    }
+}
+
+.no-desktop-large {
+    @media #{$desktop-large} {
+        display: none !important;
+    }
+}
+
+.no-desktop-small {
+    @media #{$desktop-small} {
+        display: none !important;
+    }
+}
+
+.no-mobile {
+    @media #{$mobile} {
+        display: none !important;
+    }
+}
+
+.no-tablet {
+    @media #{$tablet} {
+        display: none !important;
+    }
+}
+
+.no-device {
+    @media #{$tablet} {
+        display: none !important;
+    }
+}
+
+
+/************************************************/
+
+a.button.ver-detalles {
+    display: block;
+    width: 120px;
+    height: 35px;
+    background-color: $gris-claro-2;
+    border: 1px solid $gris-oscuro-1;
+    padding-top: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    @include estilo-tipografico(0.7rem, $negro-2, $source-sans, 400, center);
+    &:after {
+        content: '>>';
+        margin-left: 5px;
+        font-size: 0.45rem;
+        vertical-align: middle;
+    }
+}
+
+/* leaving animations ----------------------------------------- */
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* entering animations --------------------------------------- */
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* ----------------------- */
+
+.ng-enter {
+    animation: slideInRight 0.5s both ease-in;
+    z-index: 8888;
+}
+
+.ng-leave {
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+}
+
+.page-home.ng-enter {
+    animation: slideInRight 0.5s both ease-in;
+}
+
+.page-home.ng-leave {
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+}

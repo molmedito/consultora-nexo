@@ -1,0 +1,24 @@
+/* TAMAÑOS (Media Queries) */
+$mobile: "(max-width: 767px)"; //xs
+$mobilelandscape: "(max-width: 767px) and (orientation: landscape)";
+$tablet: "(min-width: 768px) and (max-width: 991px)"; // sm
+$desktop-small: "(min-width: 992px) and (max-width: 1199px)"; // md
+$mobile-y-tablet: "(max-width: 991px)";
+$no-mobile: "(min-width: 768px)";
+$desktop: "(min-width: 992px)";
+$desktop-large: "(min-width: 1200px)"; //lg
+$phablet: "(min-width: 480px) and (max-width: 767px)";
+
+/* COLORES */
+$gris-claro-1: #9b9b9b;
+$gris-claro-2: #eeeeee;
+$gris-oscuro-1: #5a5a5a;
+$gris-oscuro-2: #777777;
+$negro-1: #080808;
+$negro-2: #222222;
+$azul-1: #006ebf;
+$blanco: white;
+
+/* TIPOGRAFÍAS */
+$helvetica: 'Helvetica', sans-serif;
+$source-sans: 'Source Sans Pro', sans-serif;
