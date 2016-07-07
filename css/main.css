@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/* TAMAÑOS (Media Queries) */
+/* TAMA├æOS (Media Queries) */
 /* COLORES */
-/* TIPOGRAFÍAS */
+/* TIPOGRAF├ìAS */
 /* Estados de overflow */
 .overflow-auto {
   overflow: auto; }
@@ -14846,7 +14846,7 @@
 @media (min-width: 1200px) {
   .lg-no-border-right {
     border-right: none !important; } }
-/* Ancho variable según elementos + clases (MIXIN) */
+/* Ancho variable seg├║n elementos + clases (MIXIN) */
 /* Clases para columnas del 1 al 24 */
 .grilla-1-24 {
   width: 4.16667%;
@@ -18993,10 +18993,10 @@ footer {
   #slider .owl-item {
     position: relative; }
     #slider .owl-item .caption {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #080808;
       position: absolute;
       bottom: 60px;
-      left: 8.33333%;
+      right: 0;
       max-width: 60%;
       padding: 20px; }
       @media (max-width: 991px) {
@@ -19010,12 +19010,13 @@ footer {
           padding: 20px;
           box-sizing: border-box; } }
       #slider .owl-item .caption h3 {
-        font-size: 1rem;
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: 400;
+        font-size: 1.6rem;
+        font-family: "Unica One", cursive;
+        font-weight: 700;
         color: white;
         text-align: left;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        text-transform: uppercase; }
   @media (max-width: 991px) {
     #slider .owl-nav {
       position: relative; } }
@@ -19044,26 +19045,29 @@ main section {
   padding-bottom: 15px; }
   main section h2 {
     font-size: 1.8rem;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
+    font-family: "Unica One", cursive;
+    font-weight: 700;
     color: #5a5a5a;
     text-align: left;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    text-transform: uppercase; }
     @media (max-width: 767px) {
       main section h2 {
         text-align: center; } }
     main section h2 span {
       font-size: 1.8rem;
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
+      font-family: "Unica One", cursive;
+      font-weight: 700;
       color: #777777;
-      text-align: left; }
+      text-align: left;
+      text-transform: uppercase; }
   main section h2.titulo {
-    font-size: 1.8rem;
-    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.6rem;
+    font-family: "Unica One", cursive;
     font-weight: 700;
     color: white;
     text-align: left;
+    text-transform: uppercase;
     background-color: #080808;
     padding: 15px 30px;
     margin-bottom: 15px; }

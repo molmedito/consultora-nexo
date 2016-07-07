@@ -12,10 +12,10 @@
     .owl-item {
         position: relative;
         .caption {
-            background-color: rgba(0,0,0,0.5);
+            background-color: $negro-1;
             position: absolute;
             bottom: 60px;
-            left: 8.33333%;
+            right: 0;
             max-width: 60%;
             padding: 20px;
             @media #{$mobile-y-tablet}{
@@ -29,8 +29,9 @@
                 box-sizing: border-box;
             }
             h3 {
-                @include estilo-tipografico(1rem, $blanco, $source-sans, 400, left);
+                @include estilo-tipografico(1.6rem, $blanco, $damion, 700, left);
                 text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+                text-transform: uppercase;
             }
         }
     }
@@ -67,18 +68,21 @@ main {
         padding-top: 15px;
         padding-bottom: 15px;
         h2 {
-            @include estilo-tipografico(1.8rem, $gris-oscuro-1, $source-sans, 400, left);
+            @include estilo-tipografico(1.8rem, $gris-oscuro-1, $damion, 700, left);
             margin-bottom: 15px;
+            text-transform: uppercase;
             @media #{$mobile}{
                 text-align: center;
             }
             span {
-                @include estilo-tipografico(1.8rem, $gris-oscuro-2, $source-sans, 400, left);
+                @include estilo-tipografico(1.8rem, $gris-oscuro-2, $damion, 700, left);
+                text-transform: uppercase;
             }
         }
     
         h2.titulo {
-            @include estilo-tipografico(1.8rem, $blanco, $source-sans, 700, left);
+            @include estilo-tipografico(1.6rem, $blanco, $damion, 700, left);
+            text-transform: uppercase;
             background-color: $negro-1;
             padding: 15px 30px;
             margin-bottom: 15px;

@@ -1,4 +1,4 @@
-var app = angular.module('prosales', ['ngRoute', 'ngAnimate']);
+var app = angular.module('consultoraNexo', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
